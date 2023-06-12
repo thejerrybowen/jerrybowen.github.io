@@ -2,28 +2,52 @@
 <html lang="en">
 <head>
 	<meta charset = "UTF-8">
-	<link rel="stylesheet" href="styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="./styles.css">
 	<title>The Jerry Bowen - Home</title>
 	<!--Gerald Bowen
 	01/29/23
 	Notepad++
 	-->
 </head>
-<header>
-	<img src="images/fullsize.png" alt="Jerry Bowen Logo" width="400" height="200">
-	<nav>
-		<ul>
-			<li><a href="pages/portfolio.html">Portfolio</a>
-			<li><a href="pages/professionalcareer.html">Professional Career</a>
-			<li><a href="pages/contact.html">Contact</a>
-			<li><a href="pages/about.html">About</a>
-		</ul>
-	</nav>
-</header>
 <body>
-	<img src="images/placeholder.png" alt="Scrolling image" width="1000" height="500">
+	<nav>
+		<div class="container nav_container">
+			<a href="index.html" class="nav nav_logo"><img src="images/fullsizeclear.png" alt="Jerry Bowen Logo"></a>
+			<ul class="nav_links">
+				<!--<li><a href="index.html"><img src="images/fullsize.png" alt="Jerry Bowen Logo" width="200" height="100"></a></li>-->
+				<li><a class="nav" href="pages/portfolio.html">Portfolio</a>
+				<li><a class="nav" href="pages/professionalcareer.html">Professional Career</a>
+				<li><a class="nav" href="pages/contact.html">Contact</a>
+				<li><a class="nav" href="pages/about.html">About</a>
+			</ul>
+			<br></br>
+		</div>
+	</nav>
+	<div class="homepage images">
+		<img class="slides fading" src="images/campusnight1.jpg">
+		<img class="slides fading" src="images/prettyplace1.jpg">
+		<img class="slides fading" src="images/murray1.jpg">
+		<img class="slides fading" src="images/sodacity1.jpg">
+	</div>
+	<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("slides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 9000);    
+}
+</script>
 </body>
 <footer>
-	<p><i class="material-icons">&copy;</i>Jerry Bowen 2022 | All rights reserved</p>
+	<p><i class="material-icons">&copy;</i> Jerry Bowen 2023 | All rights reserved</p>
 </footer>
 </html>
