@@ -39,16 +39,16 @@ h1, h2{
 
 h1{
 	font-size: 4rem;
-	color: red;
+	color: var(--color-az);
 }
 
 h2{
 	font-size: 3.5rem;
-	color: blue;
+	color: var(--color-sandstorm);
 }
 
 a{
-	color: green;
+	color: var(--color-az);
 	transition: var(--transition);
 }
 
