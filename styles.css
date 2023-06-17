@@ -48,12 +48,12 @@ h2{
 }
 
 a{
-	color: var(--color-az);
+	color: var(--color-sandstorm);
 	transition: var(--transition);
 }
 
 a.nav:hover{
-	color: white;
+	color: var(--color-az);
 }
 
 .container{
